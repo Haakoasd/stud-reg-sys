@@ -4,11 +4,14 @@ const app = express();
 const hbs = require("hbs");
 
 //Require connection
-require("./db/conn");
+
 const Register = require("./models/registers");
 const async = require("hbs/lib/async");
 
 const port = process.env.PORT || 3000;
+
+const connectDB = require('./db/conn');
+connectDB();
 
 //Setting paths
 const static_path = path.join(__dirname, "../public");
