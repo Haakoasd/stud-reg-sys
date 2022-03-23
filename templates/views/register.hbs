@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="css/main.css">
+
+    <!--Font import-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Overpass&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    {{>header}}
+    <h2>Sign up for IDG 7878</h2>
+        <form action="/register" method="post">
+            <input type="text" name="firstname" id="" placeholder="Firstname">
+            <input type="text" name="lastname" id="" placeholder="Lastname">
+            <input type="text" name="studentId" id="" placeholder="Student ID">
+            <input type="number" name="age" id="" placeholder="Age">
+            <input type="text" name="nationality" id="" placeholder="Nationality">
+            <input type="text" name="degree" id="" placeholder="Degree">
+            <input type="submit" value="Register">
+        </form>
+        {{>footer}}
+</body>
+
+</html>
