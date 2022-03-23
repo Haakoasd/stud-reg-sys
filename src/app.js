@@ -34,6 +34,7 @@ app.get("/", async (req, res) => {
     }
 })
 
+//Register route
 app.get("/register", (req, res) => {
     res.render("register");
 })
