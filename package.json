@@ -2,11 +2,11 @@
   "name": "stud-reg-sys",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "src/app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon src/app.js -e js,hbs",
-    "start": "node app.js"
+    "start": "node src/app.js"
   },
   "keywords": [],
   "author": "",
