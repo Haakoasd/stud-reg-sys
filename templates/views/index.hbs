@@ -20,20 +20,23 @@
     <div class="students">
         {{#each docs}}
         <div class="studentContainer">
-            <h3>{{this.firstname}} {{this.lastname}}                <div class="studentBtns">
+            <h3>{{this.firstname}} {{this.lastname}}
+                <div class="studentBtns">
                     <a href="/{{_id}}">Edit</a>
                     <a href="/deleteStudent/{{_id}}">Delete</a>
-                </div></h3>
+                </div>
+            </h3>
             <ul>
                 <li><b>Student ID Code:</b> {{this.studentId}}</li>
                 <li><b>Age: </b> {{this.age}}</li>
                 <li><b>Nationality: </b> {{this.nationality}}</li>
-                <li><b>Degree: </b>  {{this.degree}}</li>
+                <li><b>Degree: </b> {{this.degree}}</li>
 
             </ul>
         </div>
         {{/each}}
     </div>
+    {{>footer}}
 </body>
 
 </html>

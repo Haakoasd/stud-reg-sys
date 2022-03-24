@@ -61,7 +61,7 @@ app.post("/register", async (req, res) => {
         })
 
         const registered = await registerStudent.save();
-        res.status(201).render("register");
+        res.status(201).render("register",{ message: "Student added!", });
 
     } catch (error) {
         console.log(error);
@@ -70,7 +70,7 @@ app.post("/register", async (req, res) => {
 })
 
 //Update Student
-app.post("/update", async (req, res)=>{
+app.post("/updateStudent", async (req, res)=>{
     try {
         await Register.findByIdAndUpdate(req.body.id,{
             firstname: req.body.firstname,
@@ -80,8 +80,7 @@ app.post("/update", async (req, res)=>{
             nationality: req.body.nationality,
             degree: req.body.degree,
         });
-        res.redirect("/");
-        console.log(req.body.id);
+        res.status(201).render("updateStudent",{ message: "Student updated!", });
 
     } catch (error) {
         console.log(error);

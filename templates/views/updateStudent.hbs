@@ -17,17 +17,19 @@
 <body>
     {{>header}}
     <h2>Edit student: {{doc.studentId}}</h2>
-        <form action="/update" method="post">
-            <input type="text" name="firstname" id="" placeholder="Firstname" value="{{doc.firstname}}">
-            <input type="text" name="lastname" id="" placeholder="Lastname" value="{{doc.lastname}}">
-            <input type="text" name="studentId" id="" placeholder="Student ID" value="{{doc.studentId}}">
-            <input type="number" name="age" id="" placeholder="Age" value="{{doc.age}}">
-            <input type="text" name="nationality" id="" placeholder="Nationality" value="{{doc.nationality}}">
-            <input type="text" name="degree" id="" placeholder="Degree" value="{{doc.degree}}">
-            <input type="text" name="id" id="" value="{{id}}" style="display: none;">
-            <input type="submit" value="Edit">
-        </form>
-        {{>footer}}
+    <form action="/updateStudent" method="post">
+        <input type="text" name="firstname" id="" placeholder="Firstname" value="{{doc.firstname}}">
+        <input type="text" name="lastname" id="" placeholder="Lastname" value="{{doc.lastname}}">
+        <input type="text" name="studentId" id="" placeholder="Student ID" value="{{doc.studentId}}">
+        <input type="number" name="age" id="" placeholder="Age" value="{{doc.age}}">
+        <input type="text" name="nationality" id="" placeholder="Nationality" value="{{doc.nationality}}">
+        <input type="text" name="degree" id="" placeholder="Degree" value="{{doc.degree}}">
+        <input type="text" name="id" id="" value="{{id}}" style="display: none;">
+        <input type="submit" value="Edit">
+    </form>
+    <p style="text-align: center;">{{message}}</p>
+
+    {{>footer}}
 </body>
 
 </html>
